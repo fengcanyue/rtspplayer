@@ -6,10 +6,24 @@ CONFIG += c++11
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+
 SOURCES += \
         main.cpp
 
 RESOURCES += qml.qrc
+
+INCLUDEPATH += \
+    3rd/ffmpeg/include
+
+LIBS += \
+    $$PWD/3rd/ffmpeg/lib/avcodec.lib \
+    $$PWD/3rd/ffmpeg/lib/avdevice.lib \
+    $$PWD/3rd/ffmpeg/lib/avfilter.lib \
+    $$PWD/3rd/ffmpeg/lib/avformat.lib \
+    $$PWD/3rd/ffmpeg/lib/avutil.lib \
+    $$PWD/3rd/ffmpeg/lib/avdevice.lib \
+    $$PWD/3rd/ffmpeg/lib/swresample.lib \
+    $$PWD/3rd/ffmpeg/lib/swscale.lib
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
