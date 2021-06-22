@@ -1,0 +1,2 @@
+# rtspplayer
+Qt FFmpeg player
